@@ -30,7 +30,7 @@ for i in range(len(weights)):
 
 weighted_average /= (sum(weights))
 print(weighted_average)
-'''
+
 
 a = []
 b = []
@@ -42,5 +42,30 @@ for j in range(10000):
 print b
 hist = np.histogram(b,[0,1,2,3,4,5,6,7])
 print hist
+'''
+
+import random as rand
+
+num_states = 3
+elec_votes = [14, 29, 16]
+c_perc = [.6, .7, .6]
+num_sims = 10
+votes = [[0]*num_sims,[0]*num_sims]
+
+for i in range(num_sims):
+    for state in range(num_states):
+
+        x = rand.randint(1,1000)
+        if x < c_perc[state]*1000:
+            votes[0][i]+=elec_votes[state]
+        else:
+            votes[1][i]+=elec_votes[state]
+
+
+print votes
+
+
+
+
 
 

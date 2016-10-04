@@ -13,6 +13,7 @@ if userAnswer == correctAnswer:
 else:
     print "Incorrect!"
 
+# --------------------------------------
 # with try again
 
 import random
@@ -33,13 +34,18 @@ while userAnswer != correctAnswer:
     else:
         print "Incorrect!"
 
-
 '''
+# --------------------------------------
 # with try again and play 5 times
 
 import random
 
-def play():
+def play(name):
+
+    print " "
+    print "Hello Again", name, "!"
+
+
     for i in range(5):
 
         factor1 = random.randint(2,10)
@@ -51,14 +57,14 @@ def play():
         userAnswer = 1
         while userAnswer != correctAnswer:
             userAnswer = raw_input("Please enter the product of "+str(factor1)+" and "+str(factor2)+" : ")
-            userAnswer = int(userAnswer)
-
-            if userAnswer == correctAnswer:
-                print "Correct!"
-            else:
-                print "Incorrect!"
-
-
+            try:
+                userAnswer = int(userAnswer)
+                if userAnswer == correctAnswer:
+                    print "Correct!"
+                else:
+                    print "Incorrect!"
+            except:
+                print "Please enter an integer."
 
 # Gamify
 def instructions():
@@ -67,10 +73,10 @@ def instructions():
     print "Welcome, "+name + "!"
     print "Let's practice multiplication"
     print "I'll give you two factors, and you enter their product"
-
+    return name
 
 def main():
-    instructions()
-    play()
+    n = instructions()
+    play(n)
 
 main()
