@@ -47,10 +47,11 @@ print hist
 import random as rand
 
 num_states = 3
-elec_votes = [14, 29, 16]
-c_perc = [.6, .7, .6]
-num_sims = 10
+elec_votes = [14, 14, 14]
+c_perc = [.6, .6, .6]
+num_sims = 100
 votes = [[0]*num_sims,[0]*num_sims]
+winner = [0]*num_sims
 
 for i in range(num_sims):
     for state in range(num_states):
@@ -61,8 +62,19 @@ for i in range(num_sims):
         else:
             votes[1][i]+=elec_votes[state]
 
+    if votes[1][i] > votes[0][i]:
+        winner[i] = 1
 
-print votes
+
+
+
+print "clinton: ",  votes[0]
+#print "trump  : ",  votes[1]
+
+#print "winner: ", winner
+print "percent trump: ", sum(winner)/float(num_sims)
+
+#histogram with number of electoral votes on x-axis
 
 
 
