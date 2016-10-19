@@ -143,6 +143,20 @@ def numToBalancedTernary(N):
         N = N/3
         return numToBalancedTernary(N) +'0'
 
+
+def numToTernary(N):
+    if N == 0:
+        return ''
+    elif N%3 == 1:
+        N = (N-1)/3
+        return numToTernary(N) + '1'
+    elif N%3 == 2:
+        N = (N-2)/3
+        return numToTernary(N) + '2'
+    else:
+        N = N/3
+        return numToTernary(N) +'0'
+
 print balancedTer
 print numToBalancedTernary(balancedTernaryToNum(balancedTer))
 
