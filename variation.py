@@ -21,24 +21,23 @@ def variation(xList,yList, order):
 
         if sum(directVar[n-1]) == 0:
             print "The data varies directly with an equation of order ", n
-            #sys.exit()
+            sys.exit()
         elif sum(inverseVar[n-1]) == 0:
             print "The data varies inversely with an equation of order ", n
-            #sys.exit()
+            sys.exit()
         else:
             print "The data varies neither directly or inversely with an equation of order ", n
 
 
-#variation([2.0,4.0,8.0],[4.0,2.0,1.0],10)
+variation([1,2,3,4],[1,8,27,64],10)
 
 
 def simpleVar(xList,yList,n):
-    """
-    :param xList: x values
-    :param yList: y values
-    :param n: order of equation
-    :return:
-    """
+    '''
+    xlist = three x values
+    ylist = three y values
+    n = order of equation you're checking for
+    '''
     if yList[0]/(xList[0]**n) == yList[1]/(xList[1]**n) and yList[1]/(xList[1]**n) == yList[2]/(xList[2]**n) \
       and yList[2]/(xList[2]**n) == yList[3]/(xList[3]**n) and yList[3]/(xList[3]**n) == yList[0]/(xList[0]**n):
         print "The data varies directly with an equation of order ", n
@@ -48,5 +47,6 @@ def simpleVar(xList,yList,n):
     else:
         print "The data varies neither directly or inversely with an equation of order ", n
 
-simpleVar([1,2,3,4],[1,4,9,16],2)
-print " "
+#simpleVar([1,2,3,4],[1,4,9,16],2)
+
+#print " "

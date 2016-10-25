@@ -31,7 +31,7 @@ def fibIter(n):
     else:
         for i in range(1,n):
             L.append(L[i-1] + L[i])
-        print L
+        #print L
         return L[n]
 
 def fib(n):

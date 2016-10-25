@@ -6,7 +6,6 @@ print 'Notes: '
 print " "
 print "------------------------------------- "
 print 'Problem 2) Recursive Functions '
-print 'Notes: '
 print " "
 print '# Fibonnaci Tests'
 print "fib(5) == 5 = ",fib(5)," : ", 5 == fib(5)
