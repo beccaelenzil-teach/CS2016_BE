@@ -1,15 +1,15 @@
 import random
-import time
-import pygame
 
+"""
 def gameConstants():
-    width = 120
-    height = 120
-    cell_size = 6
+    width = 20
+    height = 20
+    cell_size = 4
     spacing = 1
     return [width,height,cell_size,spacing]
 
 [width,height,cell_size,spacing] = gameConstants()
+"""
 
 def createOneRow(width):
         """ returns one row of zeros of width "width"...
@@ -128,7 +128,8 @@ def next_life_generation(A):
                 elif count == 3:# and A[row][col] == 0:
                     newA[row][col] = 1
         static = (newA == A)
-        return [static,newA]
+        #return [static,newA]
+        return newA
 '''
 A = [ [0,0,0,0,0],
       [0,0,1,0,0],

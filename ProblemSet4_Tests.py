@@ -1,11 +1,12 @@
 print 'Total Score: '
 print 'Notes: '
 print "------------------------------------- "
-print 'Problem 1) Recursive Drawing '
+print 'Problem 1) Recursive Drawing: '
 print 'Notes: '
 print " "
 print "------------------------------------- "
-print 'Problem 2) Recursive Functions '
+print 'Problem 2) Recursive Functions: '
+print 'Notes: '
 print " "
 print '# Fibonnaci Tests'
 print "fib(5) == 5 = ",fib(5)," : ", 5 == fib(5)
