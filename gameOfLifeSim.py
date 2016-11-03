@@ -2,9 +2,9 @@ from gameOfLifeFunctions import *
 import pygame
 
 
-width = 60
-height = 60
-cell_size = 12
+width = 40
+height = 40
+cell_size = 20
 spacing = 1
 
 def drawBoard(A,width,height,cell_size,spacing):
@@ -59,7 +59,7 @@ while not done:
     pygame.display.flip()
 
     # --- Limit to 60 frames per second
-    clock.tick(60)
+    #clock.tick(60)
 
 # Close the window and quit.
 # If you forget this line, the program will 'hang'
