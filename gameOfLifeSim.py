@@ -2,9 +2,9 @@ from gameOfLifeFunctions import *
 import pygame
 
 
-width = 50
-height = 50
-cell_size = 5
+width = 60
+height = 60
+cell_size = 12
 spacing = 1
 
 def drawBoard(A,width,height,cell_size,spacing):
@@ -41,9 +41,9 @@ clock = pygame.time.Clock()
 background = pygame.Surface(screen.get_size())
 background = background.convert()
 background.fill(BLACK)
-#screen.blit(background, (0, 0))
-#drawBoard(A)
-#pygame.display.flip()
+screen.blit(background, (0, 0))
+drawBoard(A,width,height,cell_size,spacing)
+pygame.display.flip()
 
 # -------- Main Program Loop -----------
 while not done:
@@ -52,14 +52,14 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
 
-    [static,A] = next_life_generation(A)
-    #drawBoard(A,width,height,cell_size,spacing)
+    A = next_life_generation(A)
+    drawBoard(A,width,height,cell_size,spacing)
 
     # --- Go ahead and update the screen with what we've drawn.
-    #pygame.display.flip()
+    pygame.display.flip()
 
     # --- Limit to 60 frames per second
-    #clock.tick(60)
+    clock.tick(60)
 
 # Close the window and quit.
 # If you forget this line, the program will 'hang'
