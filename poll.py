@@ -68,6 +68,7 @@ def loadData():
 
 # run simulation
 votes = electionSim()
+print votes[0]
 
 # histogram of electoral votes from simulations
 plt.figure(0)
