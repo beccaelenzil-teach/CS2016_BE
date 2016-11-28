@@ -30,7 +30,7 @@ A = [ [0,0,0,0,0],
       [0,0,0,0,0]]
 print 'A = '
 printBoard(A)
-print 'countNeighbors(2,2,A) = 2:',countNeighbors(2,2,A), 2 == countNeighbors(2,2,A)
+print 'countNeighbors(2,2,A) = 2:',countNeighboroughs(2,2,A), 2 == countNeighboroughs(2,2,A)
 print ' '
 print 'next_life_generation()'
 print "------------------------------------- "
